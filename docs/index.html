@@ -7,29 +7,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="card">
-        <div class="card-content">
-            <div class="card-stats">
-                <i class="material-icons" style="color: white;">visibility</i> 
-                <p class="card-stat">2003</p>
-                <i class="material-icons"style="color: white; ">chat_bubble</i>
-                <p class="card-stat">600</p>
-                <i class="material-icons"style="color: white;">file_download</i>
-                <p class="card-stat">1437</p>
+    <div class="iphone-x">
+        <i>Speaker</i>
+        <b>Camera</b>
+        <s>10:24</s>
+        
+        <!--<span>Left action button</span>
+        <span>Right action button</span>-->
+        <div class="notifications">
+            <div class="notification" id="notification">
+                <div class="content">
+                    <div class="header">
+                        <div class="icon"></div>
+                        <div class="icon-title">Play Store</div>
+                        <div class="time-stamp">1m ago</div>
+                    </div>
+                    <div class="body">
+                        <p class="header" id="notificationHeader">Notification</p>
+                        <p class="data" id="notificationContent">toEat is an app that takes the stress of choosing what to eat away from you. 
+                            <a href="https://play.google.com/store/apps/details?id=com.cpp.toEat" class="link-to-store">Try it out!</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer">
-                <img src="./avatar.png" class="avatar">
-                <div class="card-details">
-                    <h3 class="card-title">White Mountains</h3>
-                    <p class="card-author">by <em>Joseph Therrian</em></p>
+            <div class="notification2" id="notification2">
+                <div class="content">
+                    <div class="header">
+                        <div class="icon2"></div>
+                        <div class="icon-title">Photos</div>
+                        <div class="time-stamp">Now</div>
+                    </div>
+                    <div class="body">
+                        <p class="header" id="notificationHeader2">Notification</p>
+                        <p class="data" id="notificationContent2">
+                            <a href="./takealook.html" class="link-to-store">View Screenshots</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+    <script>
+        let notification= document.getElementById("notification");
+        let notificationHeader = document.getElementById("notificationHeader")
+        let notificationContent = document.getElementById("notificationContent");
+        let notification2= document.getElementById("notification2");
+        let notificationHeader2 = document.getElementById("notificationHeader2")
+        let notificationContent2 = document.getElementById("notificationContent2");
+        setTimeout(() => { notification.style.transform = "translateY(0px)"; }, 500);
+
+        notification.addEventListener("click", function(){
+            notificationHeader.innerText = "Install this years #1 food app!";
+            notificationContent.style.display = "block";
+            setTimeout(() => { notification2.style.transform = "translateY(0px)"; }, 1000);
+
+        })
+        notification2.addEventListener("click", function(){
+            notificationHeader2.innerText = "See whats inside";
+            notificationContent2.style.display = "block";
+
+        })
+    </script>
 </body>
 </html>
